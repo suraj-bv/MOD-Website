@@ -152,13 +152,7 @@ export default function Navbar() {
                   {item.label}
                 </a>
               ))}
-              <a
-                href="#download"
-                className="rounded-xl bg-sky-500 px-4 py-3 text-center text-sm font-semibold text-white"
-                onClick={() => setIsOpen(false)}
-              >
-                Download App
-              </a>
+              
             </div>
           </motion.div>
         )}
