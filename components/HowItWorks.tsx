@@ -29,7 +29,7 @@ const steps: Step[] = [
   {
     title: "Professional Arrives",
     description:
-      "Verified pro shows up on time. Track booking live and relax at home.",
+      "Verified pro shows up on time. Track your booking in real-time while you relax.",
     details: ["Live tracking", "Professional assigned", "Work begins"],
     image: "/step-3.png",
   },
