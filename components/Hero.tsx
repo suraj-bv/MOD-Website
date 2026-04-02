@@ -73,16 +73,16 @@ export default function Hero() {
       <motion.div style={{ y: ringY }} className="pointer-events-none absolute right-16 top-14 h-56 w-56 rounded-full border border-sky-200/70" />
       
       {/* Left side image (inverted) */}
-      <div className="pointer-events-none absolute left-[-20%] top-[5.3%] z-30 flex h-[620px] w-[80%] items-start scale-x-[-1] lg:left-[-19%] lg:h-[980px] lg:w-[66%]">
+      <div className="pointer-events-none absolute left-[-20%] top-[7.6%] z-30 flex h-[620px] w-[80%] items-start scale-x-[-1] lg:left-[-19%] lg:h-[980px] lg:w-[66%]">
         <Image src="/right-image.png" alt="decoration left" fill className="object-contain object-left object-top" />
       </div>
       
       {/* Right side image */}
-      <div className="pointer-events-none absolute right-[-20%] top-[5.3%] z-30 flex h-[620px] w-[80%] items-start lg:right-[-19%] lg:h-[980px] lg:w-[66%]">
+      <div className="pointer-events-none absolute right-[-20%] top-[7.6%] z-30 flex h-[620px] w-[80%] items-start lg:right-[-19%] lg:h-[980px] lg:w-[66%]">
         <Image src="/right-image.png" alt="decoration right" fill className="object-contain object-right object-top" />
       </div>
       
-      <div className="pointer-events-none absolute inset-x-0 top-[43%] h-[480px] rounded-b-[5rem] bg-[linear-gradient(to_bottom,rgba(217,226,255,0.28)_0%,rgba(67,102,192,0.62)_35%,rgba(18,26,56,0.92)_100%)] sm:rounded-b-[6rem]" />
+      <div className="pointer-events-none absolute inset-x-0 top-[45%] h-[480px] rounded-b-[5rem] bg-[linear-gradient(to_bottom,rgba(217,226,255,0.28)_0%,rgba(67,102,192,0.62)_35%,rgba(18,26,56,0.92)_100%)] sm:rounded-b-[6rem]" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-white/65 to-transparent" />
 
       <div className="relative z-10 mx-auto flex min-h-[86vh] w-full max-w-5xl flex-col items-center px-4 pb-10 pt-4 text-center sm:px-8">

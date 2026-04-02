@@ -11,7 +11,7 @@ export default function AppDownload() {
       <div className="relative mx-auto w-full max-w-5xl px-4 sm:px-8">
         <div className="rounded-3xl border border-sky-200 bg-white/90 p-8 text-center shadow-xl backdrop-blur-sm sm:p-10">
           <ScrollReveal>
-            <h2 className="font-display text-3xl font-black uppercase tracking-[0.01em] text-brand-dark sm:text-5xl">
+            <h2 className="font-display text-3xl font-medium uppercase tracking-[0.01em] text-brand-dark sm:text-5xl">
               Download The Tappit App
             </h2>
           </ScrollReveal>

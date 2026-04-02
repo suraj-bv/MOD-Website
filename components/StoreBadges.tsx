@@ -17,16 +17,16 @@ export default function StoreBadges({ className = "", size = "md", stacked = fal
       <a href="#" className={`inline-flex ${badgeSizeClass} items-center gap-2 rounded-[12px] bg-black text-white shadow-lg shadow-black/25`}>
         <Play className={iconClass} />
         <span className="flex flex-col leading-none">
-          <span className={`${topTextClass} font-semibold uppercase tracking-[0.08em] text-white/90`}>Get it on</span>
-          <span className={`${mainTextClass} font-semibold`}>Google Play</span>
+          <span className={`${topTextClass} font-medium uppercase tracking-[0.08em] text-white/90`}>Get it on</span>
+          <span className={`${mainTextClass} font-medium`}>Google Play</span>
         </span>
       </a>
 
       <a href="#" className={`inline-flex ${badgeSizeClass} items-center gap-2 rounded-[12px] bg-black text-white shadow-lg shadow-black/25`}>
         <Apple className={iconClass} />
         <span className="flex flex-col leading-none">
-          <span className={`${topTextClass} font-semibold tracking-[0.05em] text-white/90`}>Download on the</span>
-          <span className={`${mainTextClass} font-semibold`}>App Store</span>
+          <span className={`${topTextClass} font-medium tracking-[0.05em] text-white/90`}>Download on the</span>
+          <span className={`${mainTextClass} font-medium`}>App Store</span>
         </span>
       </a>
     </div>
