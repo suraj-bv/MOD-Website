@@ -61,8 +61,8 @@ function StepStackCard({ step, index, activeIndex }: StepCardProps) {
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-center">
         {/* Left: Mobile Mockup */}
         <div className="mx-auto w-full max-w-xs lg:max-w-sm">
-          <div className="rounded-[2rem] border-[6px] border-black bg-black p-0 shadow-2xl shadow-black/40">
-            <div className="relative h-[360px] w-full overflow-hidden rounded-[1.6rem] bg-white">
+          <div className="rounded-[2rem]  border-black bg-black p-0">
+            <div className="relative h-[500px] w-full overflow-hidden rounded-[1.6rem] bg-white">
               <Image
                 src={step.image}
                 alt={step.title}
