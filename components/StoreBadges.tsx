@@ -33,11 +33,7 @@ export default function StoreBadges({
           className="h-auto w-auto shrink-0 object-contain"
         />
         <span className="flex flex-col leading-none">
-          <span
-            className={`${topTextClass} font-semibold uppercase tracking-[0.08em] text-white/90`}
-          >
-            Get it on
-          </span>
+          <span className={`${topTextClass} font-semibold uppercase tracking-[0.08em] text-white/90`}>Get it on</span>
           <span className={`${mainTextClass} font-semibold`}>Google Play</span>
         </span>
       </a>
@@ -54,11 +50,7 @@ export default function StoreBadges({
           className="h-auto w-auto shrink-0 object-contain"
         />
         <span className="flex flex-col leading-none">
-          <span
-            className={`${topTextClass} font-semibold tracking-[0.05em] text-white/90`}
-          >
-            Download on the
-          </span>
+          <span className={`${topTextClass} font-semibold tracking-[0.05em] text-white/90`}>Download on the</span>
           <span className={`${mainTextClass} font-semibold`}>App Store</span>
         </span>
       </a>
