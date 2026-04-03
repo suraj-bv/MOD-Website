@@ -1,10 +1,19 @@
 import type { Metadata } from "next";
-import { DM_Sans, Playfair_Display } from "next/font/google";
+import { DM_Sans, Open_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
+
+const faviconPath = "/CF LOGO WITHOUT TEXT.png";
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["300", "400", "500", "600", "700", "800"],
+  style: ["normal"],
+});
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-display",
+  variable: "--font-footer-display",
   weight: ["600", "700", "800", "900"],
   style: ["normal", "italic"],
 });
@@ -17,21 +26,21 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Tappit | Your home, spotless - in a tap.",
-    template: "%s | Tappit",
+    default: "Clean Fanatics | Your home, spotless - in a tap.",
+    template: "%s | Clean Fanatics",
   },
   description:
-    "Tappit connects you with verified home cleaning professionals in minutes. Book on-demand, scheduled, or recurring help.",
-  metadataBase: new URL("https://tappit.in"),
+    "Clean Fanatics connects you with verified home cleaning professionals in minutes. Book on-demand, scheduled, or recurring help.",
+  metadataBase: new URL("https://cleanfanatics.com"),
   openGraph: {
-    title: "Tappit",
+    title: "Clean Fanatics",
     description: "Your home, spotless - in a tap.",
     type: "website",
   },
   icons: {
-    icon: "/favicon0clean.png",
-    shortcut: "/favicon0clean.png",
-    apple: "/favicon0clean.png",
+    icon: faviconPath,
+    shortcut: faviconPath,
+    apple: faviconPath,
   },
 };
 
@@ -42,7 +51,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${playfairDisplay.variable} ${dmSans.variable} antialiased`}>
+      <body
+        className={`${openSans.variable} ${playfairDisplay.variable} ${dmSans.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
