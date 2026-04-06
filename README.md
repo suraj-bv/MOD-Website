@@ -32,6 +32,16 @@ EARLY_ACCESS_WEBHOOK_URL=https://flow.zoho.in/.../incoming?zapikey=...&isdebug=f
 
 The app submits through `/api/early-access`.
 
+For Vercel deployments, add `EARLY_ACCESS_WEBHOOK_URL` in Project Settings -> Environment Variables and redeploy.
+
+Optional: if you intentionally need a static export build, set:
+
+```env
+STATIC_EXPORT=true
+```
+
+Leave `STATIC_EXPORT` unset for Vercel so API routes work.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

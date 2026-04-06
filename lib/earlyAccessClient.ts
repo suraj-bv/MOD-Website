@@ -54,7 +54,10 @@ export async function submitEarlyAccessRequest(
   } else {
     const text = await response.text();
     if (text) {
-      message = text.slice(0, 200);
+      const looksLikeHtml = /^\s*</.test(text);
+      message = looksLikeHtml
+        ? "Submission failed. Server endpoint is unavailable."
+        : text.slice(0, 200);
     }
   }
 

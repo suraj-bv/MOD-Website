@@ -1,12 +1,16 @@
 /** @type {import('next').NextConfig} */
+const isStaticExport = process.env.STATIC_EXPORT === "true";
+
 const nextConfig = {
   reactStrictMode: true,
 
   images: {
-    unoptimized: true, // important for static export
+    unoptimized: isStaticExport,
   },
-
-  output: 'export', // required for static hosting
 };
+
+if (isStaticExport) {
+  nextConfig.output = "export";
+}
 
 export default nextConfig;
