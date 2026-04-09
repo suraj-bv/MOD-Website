@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import type { CSSProperties } from "react";
+import Script from "next/script";
+import { type CSSProperties } from "react";
 import ScrollReveal from "./ui/ScrollReveal";
 
 type Testimonial = {
@@ -289,10 +290,21 @@ export default function Testimonials() {
         className="mx-auto mt-8 w-full max-w-[1600px] px-0 sm:mt-10"
       >
         <div className="space-y-8 sm:space-y-14">
-          <MarqueeRow items={firstRow} duration="52s" />
-          <MarqueeRow items={secondRow} reverse duration="58s" />
-          <script src="https://elfsightcdn.com/platform.js" async></script>
-          <div className="elfsight-app-d1323706-7bd0-4e00-8e5a-15c444c737a1" data-elfsight-app-lazy></div>
+          <MarqueeRow items={firstRow} duration="55s" />
+          <MarqueeRow items={secondRow} reverse duration="110s" />
+          <div className="mx-auto w-full max-w-[1500px] px-2 sm:px-4">
+            <Script
+              id="elfsight-platform-script"
+              src="https://elfsightcdn.com/platform.js"
+              strategy="afterInteractive"
+            />
+            <div className="origin-top transform scale-[1.08] sm:scale-[1.3]">
+              <div
+                className="elfsight-app-d1323706-7bd0-4e00-8e5a-15c444c737a1"
+                data-elfsight-app-lazy
+              />
+            </div>
+          </div>
         </div>
       </motion.div>
     </section>
