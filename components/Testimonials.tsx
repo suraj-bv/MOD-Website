@@ -343,9 +343,9 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   const isWomenPlaceholder = profilePhotoSrc === "/women-placeholder.svg";
 
   return (
-    <article className="relative flex h-[340px] w-[250px] shrink-0 flex-col rounded-[18px] border border-black bg-white p-4 shadow-none sm:h-[380px] sm:w-[320px] sm:p-5">
+    <article className="relative flex h-[292px] w-[204px] shrink-0 flex-col rounded-[18px] border border-black bg-white p-3 shadow-none sm:h-[380px] sm:w-[320px] sm:p-5">
       <div
-        className="text-[104px] font-extrabold leading-[0.55] text-[#2563eb] sm:text-[122px]"
+        className="text-[64px] font-extrabold leading-[0.58] text-[#2563eb] sm:text-[122px]"
         style={{ fontFamily: '"Times New Roman", Georgia, serif' }}
         aria-hidden="true"
       >
@@ -353,35 +353,35 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
       </div>
 
       <div
-        className="mt-2 flex items-center gap-2 text-[22px] leading-none text-[#ef4444]"
+        className="mt-1.5 flex items-center gap-1.5 text-sm leading-none text-[#ef4444] sm:mt-2 sm:gap-2 sm:text-[22px]"
         aria-label={`${rating.toFixed(1)} star rating`}
       >
-        <span className="text-base font-semibold text-[#121a38]">
+        <span className="text-xs font-semibold text-[#121a38] sm:text-base">
           {rating.toFixed(1)}
         </span>
         {renderStars(rating)}
       </div>
 
       <p
-        className="mt-4 flex-1 overflow-hidden text-[18px] leading-relaxed text-[#121a38]"
+        className="mt-3 flex-1 overflow-hidden text-[14px] leading-relaxed text-[#121a38] sm:mt-4 sm:text-[18px]"
         aria-label="testimonial content"
       >
         {testimonial.text}
       </p>
 
-      <div className="mt-5 flex items-center gap-4">
+      <div className="mt-4 flex items-center gap-3 sm:mt-5 sm:gap-4">
         <Image
           src={profilePhotoSrc}
           alt={`${testimonial.name} placeholder`}
           width={56}
           height={56}
-          className={`h-14 w-14 rounded-full border border-white bg-white object-cover ${isWomenPlaceholder ? "opacity-80" : "opacity-100"}`}
+          className={`h-10 w-10 rounded-full border border-white bg-white object-cover sm:h-14 sm:w-14 ${isWomenPlaceholder ? "opacity-80" : "opacity-100"}`}
         />
         <div className="min-w-0">
-          <h3 className="text-xl font-extrabold leading-tight tracking-tight text-[#0f172a] sm:text-2xl">
+          <h3 className="text-[22px] font-extrabold leading-tight tracking-tight text-[#0f172a] sm:text-2xl">
             {testimonial.name}
           </h3>
-          <p className="mt-1 text-sm leading-none text-[#121a38] sm:text-base">
+          <p className="mt-1 text-[11px] leading-none text-[#121a38] sm:text-base">
             {location}
           </p>
         </div>
@@ -405,32 +405,18 @@ function MarqueeRow({
     ["--marquee-shift" as string]: "-50%",
   } as CSSProperties;
 
-  const edgeMaskStyle = {
-    WebkitMaskImage:
-      "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.35) 6%, black 12%, black 88%, rgba(0,0,0,0.35) 94%, transparent 100%)",
-    maskImage:
-      "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.35) 6%, black 12%, black 88%, rgba(0,0,0,0.35) 94%, transparent 100%)",
-  } as CSSProperties;
-
   const leftBlurFadeStyle = {
     background:
-      "linear-gradient(to right, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.82) 45%, rgba(255,255,255,0.38) 75%, rgba(255,255,255,0) 100%)",
-    backdropFilter: "blur(3px)",
-    WebkitBackdropFilter: "blur(3px)",
+      "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.96) 8%, rgba(255,255,255,0.82) 24%, rgba(255,255,255,0.52) 48%, rgba(255,255,255,0.18) 76%, rgba(255,255,255,0) 100%)",
   } as CSSProperties;
 
   const rightBlurFadeStyle = {
     background:
-      "linear-gradient(to left, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.82) 45%, rgba(255,255,255,0.38) 75%, rgba(255,255,255,0) 100%)",
-    backdropFilter: "blur(3px)",
-    WebkitBackdropFilter: "blur(3px)",
+      "linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0.96) 8%, rgba(255,255,255,0.82) 24%, rgba(255,255,255,0.52) 48%, rgba(255,255,255,0.18) 76%, rgba(255,255,255,0) 100%)",
   } as CSSProperties;
 
   return (
-    <div
-      className="marquee-container relative w-full bg-white"
-      style={edgeMaskStyle}
-    >
+    <div className="marquee-container relative w-full overflow-hidden bg-white">
       <div
         className={`marquee-track gap-4 sm:gap-6 ${reverse ? "reverse" : ""}`}
         style={trackStyle}
@@ -440,12 +426,12 @@ function MarqueeRow({
         ))}
       </div>
       <div
-        className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 sm:w-24"
+        className="pointer-events-none absolute inset-y-0 -left-2 z-10 w-16 sm:-left-4 sm:w-28"
         style={leftBlurFadeStyle}
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 sm:w-24"
+        className="pointer-events-none absolute inset-y-0 -right-2 z-10 w-16 sm:-right-4 sm:w-28"
         style={rightBlurFadeStyle}
         aria-hidden="true"
       />
@@ -457,7 +443,7 @@ export default function Testimonials() {
   const { firstRow, secondRow } = chunkTestimonials(testimonials);
 
   return (
-    <section className="overflow-hidden bg-white py-16 sm:py-24">
+    <section className="overflow-hidden bg-white py-12 sm:py-24">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-8">
         <ScrollReveal>
           <h2 className="font-display text-3xl font-extrabold text-brand-dark sm:text-5xl">
@@ -474,11 +460,13 @@ export default function Testimonials() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-        className="mx-auto mt-8 w-full max-w-[1600px] bg-white px-0 sm:mt-10"
+        className="mx-auto mt-6 w-full max-w-[1600px] bg-white px-2 sm:mt-10 sm:px-0"
       >
         <div className="space-y-4 bg-white sm:space-y-6">
           <MarqueeRow items={firstRow} duration="55s" />
-          <MarqueeRow items={secondRow} reverse duration="110s" />
+          <div className="hidden sm:block">
+            <MarqueeRow items={secondRow} reverse duration="110s" />
+          </div>
           <div className="mx-auto w-full max-w-[1500px] px-2 sm:px-4">
             <Script
               id="elfsight-platform-script"
