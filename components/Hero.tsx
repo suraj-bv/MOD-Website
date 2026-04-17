@@ -9,12 +9,12 @@ import TwinkleSparkle from "./ui/TwinkleSparkle";
 import { submitEarlyAccessRequest } from "../lib/earlyAccessClient";
 
 const words = [
-  "PROFESSIONAL",
-  "HOUSE",
-  "HELP",
-  "FOR",
-  "MODERN",
-  "HOMES!",
+  "RELIABLE",
+  "HIGH-QUALITY",
+  "HOUSEHELP ",
+  "AT",
+  "YOUR",
+  "DOORSTEP!",
 ];
 const homeScreenSrc = "/home.jpeg";
 const bookingScreenSrc = "/booking.jpeg";
@@ -281,6 +281,7 @@ export default function Hero() {
         <div className="pointer-events-none absolute inset-x-0 top-0 z-[1] h-32 bg-gradient-to-b from-white/65 to-transparent" />
 
         <div className="relative z-10 mx-auto flex min-h-[86vh] w-full max-w-5xl flex-col items-center px-4 pb-10 pt-4 text-center sm:px-8">
+          <span className="sr-only">Gagan p kumar | Suraj BV</span>
           <div className="max-w-3xl">
             <h1 className="font-display text-5xl font-black uppercase leading-[0.94] tracking-[0.01em] text-brand-dark sm:text-6xl lg:text-7xl">
               {words.map((word, index) => (
@@ -295,7 +296,7 @@ export default function Hero() {
                   }}
                   className="mr-2 inline-block sm:mr-4 lg:mr-6"
                 >
-                  {word === "HOUSE" || word === "HELP" ? (
+                  {word === "HIGH-QUALITY" ? (
                     <span className="italic text-sky-500">{word}</span>
                   ) : (
                     word
