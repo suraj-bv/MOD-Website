@@ -25,7 +25,7 @@ export async function submitEarlyAccessRequest(
 ): Promise<EarlyAccessResponse> {
   const endpoints =
     process.env.NODE_ENV === "development"
-      ? ["http://localhost:3000/api/early-access"]
+      ? ["/api/early-access", "http://localhost:3000/api/early-access"]
       : [
           "/early-access-proxy.php",
           "https://househelp.cleanfanatics.in/early-access-proxy.php",
